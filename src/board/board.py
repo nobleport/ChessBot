@@ -29,12 +29,17 @@ class Board:
             color_type = piece_type.split('-') #this is the [color, type] 
             for index in types_to_create[piece_type]:
                 self.board[index].create_piece_on_tile(color_type[1], color_type[0], index)
-                # print(self.board[index])
+                # print("hello maryn")
                 #i've created the piece and attached it to the tile at that location
     
             
     def __repr__(self):
         return_list = []
         for tile in self.board:
-            return_list.append(f'Tile:(occupied:{tile.is_occupied()} piece:{tile.piece})')
+            # return_list.append(f'Tile:(occupied:{tile.is_occupied()} piece:{tile.piece})')
+            if tile.is_occupied():
+                color = tile.piece.color
+                return_list.append(tile.piece.piece_symbol[color])
+            else:
+                return_list.append(' ')
         return f"Board:({return_list})"

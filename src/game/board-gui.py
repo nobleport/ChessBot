@@ -7,6 +7,8 @@ class ChessGame(tk.Tk):
         self.title("Chess Game")
         self.geometry("600x600")
 
+        # I want to replace these hard coded piece symbol with their objects 
+
         self.board_gui =[
             ["♖","♘","♗","♕","♔","♗","♘","♖"],
             ["♙","♙","♙","♙","♙","♙","♙","♙"],
@@ -18,7 +20,7 @@ class ChessGame(tk.Tk):
             ["♜","♞","♝","♛","♚","♝","♞","♜"]
         ]
 
-        self.canvas = tk.Canvas(self, width=600, height=600, bg='blue')
+        self.canvas = tk.Canvas(self, width=600, height=600)
         self.canvas.pack()
 
         self.draw_board()
