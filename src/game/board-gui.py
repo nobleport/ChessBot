@@ -10,6 +10,7 @@ class ChessGame(tk.Tk):
         # I want to replace these hard coded piece symbol with their objects 
 
 
+
         self.board_gui =[
             ["♖","♘","♗","♕","♔","♗","♘","♖"],
             ["♙","♙","♙","♙","♙","♙","♙","♙"],
