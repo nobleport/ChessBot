@@ -27,6 +27,13 @@ class Tile:
         self.piece = new_piece
         self.occupied = True
     
+    def tile_to_piece_symbol(self):
+        if self.is_occupied():
+            color = self.piece.color
+            return self.piece.piece_symbol[color]
+        else:
+            return ' '
+
     def __repr__(self):
         return f'Tile(occupied:{self.occupied} piece:{self.piece})'
     
